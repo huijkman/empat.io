@@ -1,0 +1,6 @@
+{
+    "aws-access-key": "AKIAI5C6S3PTTMAPK4WQ",
+    "aws-bucket-name": "empatio-web",
+    "aws-bucket-website": "empatio-web.s3-website-us-east-1.amazonaws.com",
+    "port": 8857
+}
