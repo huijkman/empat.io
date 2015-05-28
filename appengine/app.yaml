@@ -1,0 +1,31 @@
+application: empatio-web
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: site/static/images/favicon\.ico
+
+- url: /static/css
+  static_dir: site/static/css
+
+- url: /static/images
+  static_dir: site/static/images
+
+- url: /static/js
+  static_dir: site/static/js
+
+- url: /.*
+  script: main.app
+
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+
+- name: jinja2
+  version: latest
+

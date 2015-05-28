@@ -43,7 +43,7 @@ body {
   position: relative; }
   body::after {
     content: "";
-    opacity: 0.25;
+    opacity: 0.05;
     top: 0;
     left: 0;
     bottom: 0;
@@ -113,3 +113,5 @@ Layout
   padding: 0 40px 0 40px;
   max-width: 800px;
   position: relative; }
+
+/*# sourceMappingURL=style.css.map */

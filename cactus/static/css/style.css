@@ -43,14 +43,14 @@ body {
   position: relative; }
   body::after {
     content: "";
-    opacity: 0.25;
+    opacity: 0.1;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     position: fixed;
     z-index: -1;
-    background: black url(/static/images/crowd-S.jpg) 50% 50% no-repeat;
+    background: #222 url(/static/images/crowd-S.jpg) 50% 50% no-repeat;
     background-size: cover; }
     @media (min-width: 600px) {
       body::after {
@@ -113,3 +113,5 @@ Layout
   padding: 0 40px 0 40px;
   max-width: 800px;
   position: relative; }
+
+/*# sourceMappingURL=style.css.map */
