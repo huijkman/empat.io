@@ -1,0 +1,35 @@
+{% extends "person.html" %}
+
+{% block person-current %}
+<img class="thumb round" alt="" src="{% static '/images/tim.jpg' %}">
+Tim is color blind
+{% endblock person-current %}
+
+{% block person-prev %}
+<a class="h4" href="/arend.html"><span class="icon-chevron-left"></span> Arend</a>
+{% endblock person-prev %}
+
+{% block person-next %}
+<a class="h4" href="anita.html">Anita <span class="icon-chevron-right"></span></a>
+{% endblock person-next %} 
+
+{% block main-video %}
+<iframe width="100%" height="600" src="https://www.youtube.com/embed/eIulUKIRco4" frameborder="0" allowfullscreen></iframe>
+{% endblock main-video %}
+
+{% block sub-content %}
+	<ul class="cols cols-variable">
+	  <li class="col">
+	    <h2>Video 1</h2>
+	    <iframe width="300" height="200" src="https://www.youtube.com/embed/eIulUKIRco4" frameborder="0" allowfullscreen></iframe>
+	  </li>
+	  <li class="col">
+	    <h2>Video 2</h2>
+	    <iframe width="300" height="200" src="https://www.youtube.com/embed/eIulUKIRco4" frameborder="0" allowfullscreen></iframe>
+	  </li>
+	  <li class="col">
+	    <h2>[Title]</h2>
+	    <p>[Text]</p>
+	  </li>
+	</ul>
+{% endblock sub-content %}
