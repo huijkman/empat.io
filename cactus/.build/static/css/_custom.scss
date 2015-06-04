@@ -118,6 +118,9 @@ a {
 .mini-page.wide {
     padding: 1.5rem;
 }
+.mini-page.scrollable-x {
+    overflow-x: auto;
+}
 
 .site-header {
     padding-bottom: 0;
@@ -128,13 +131,16 @@ a {
     bottom: 0;
     left: 0;
     width: 100%;
-    box-shadow: 0 0 20px #40433b;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
     background: white;
 }
 
 .site-logo {
     position: relative;
     max-height: 3rem;
+    @media only screen and (max-width: 600px) {
+        max-height: 1.5rem;
+    }
 }
 
 .page-header {
@@ -211,7 +217,7 @@ footer {
 
 .cols-fixed {
     flex-wrap: nowrap;
-    overflow: hidden;
+    //overflow: hidden;
 }
 .cols-fixed > .col {
     flex: 1 0 25%;
