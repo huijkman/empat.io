@@ -696,15 +696,16 @@ html {
   html {
     font-size: 100%; } }
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Avenir', sans-serif;
   font-size: 1rem;
   line-height: 1;
   background: white;
-  color: #40433b; }
+  color: black; }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4 {
-  font-family: 'Merriweather Sans'; }
+  font-family: 'Avenir', sans-serif;
+  font-weight: 700; }
 
 h1, .h1 {
   font-size: 2.5rem; }
@@ -776,7 +777,8 @@ a {
 
 .site-logo {
   position: relative;
-  max-height: 3rem; }
+  max-height: 3rem;
+  margin-bottom: -1px; }
   @media only screen and (max-width: 600px) {
     .site-logo {
       max-height: 1.5rem; } }
@@ -795,7 +797,7 @@ footer {
   padding-bottom: 40px; }
 
 .dark {
-  background: #40433b;
+  background: black;
   color: white; }
 
 .light {
