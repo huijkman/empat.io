@@ -789,9 +789,12 @@ a {
 
 .video-container {
   margin: 0;
-  padding: 0 0 1.5rem 0;
-  background: black;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.8);
   color: white; }
+
+.video-container p {
+  padding-bottom: 1.2rem; }
 
 footer {
   padding-bottom: 40px; }
@@ -803,6 +806,10 @@ footer {
 .light {
   background: white;
   color: black; }
+
+.medium {
+  background: rgba(0, 0, 0, 0.8);
+  color: white; }
 
 /* Columns */
 [class*="cols"] {
