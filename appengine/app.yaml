@@ -18,6 +18,15 @@ handlers:
 - url: /static/js
   static_dir: site/static/js
 
+- url: /static/fonts
+  static_dir: site/static/fonts
+
+- url: /people
+  static_dir: site/people
+
+- url: /mensen
+  static_dir: site/mensen
+
 - url: /.*
   script: main.app
 
