@@ -789,6 +789,12 @@ h3, .h3 {
 h4, .h4, h5, h6 {
   font-size: 1.25rem; }
 
+@media (max-width: 600px) {
+  h1, .h1 {
+    font-size: 2.0rem; }
+
+  h2, .h2 {
+    font-size: 1.75rem; } }
 p {
   line-height: 1.5; }
 
@@ -875,13 +881,17 @@ a {
   position: relative;
   max-height: 3rem;
   margin-bottom: -1px; }
-  @media only screen and (max-width: 600px) {
-    .site-logo {
-      max-height: 1.5rem; } }
 
 .page-header {
   padding-top: 1rem;
   padding-bottom: 0.8rem; }
+  @media only screen and (max-width: 800px) {
+    .page-header {
+      padding-top: 0.5rem;
+      padding-bottom: 0.4rem; }
+      .page-header .name,
+      .page-header .sub {
+        display: none; } }
 
 .video-container {
   height: calc(100vh - 10rem);
@@ -889,6 +899,9 @@ a {
   padding: 0;
   background: rgba(0, 0, 0, 0.8);
   color: white; }
+  @media only screen and (max-width: 600px) {
+    .video-container {
+      height: calc(100vh - 13.5rem); } }
 
 .video-container p {
   padding-bottom: 1.2rem; }
@@ -992,6 +1005,22 @@ nav a [class^="icon-"], nav a [class*=" icon-"] {
 nav a:hover [class^="icon-"], nav a:hover [class*=" icon-"], nav a:focus [class^="icon-"], nav a:focus [class*=" icon-"] {
   transform: scale(1.5); }
 
+@media only screen and (max-width: 600px) {
+  .site-header {
+    width: 100%; }
+
+  .site-header nav {
+    position: relative;
+    height: 3rem;
+    width: 100vw !important;
+    margin: 0 0 0 -1.5rem;
+    padding: 0 1.5rem; }
+    .site-header nav ul {
+      height: 3rem;
+      overflow: hidden;
+      margin: 0 !important; }
+      .site-header nav ul li {
+        padding-right: 0 !important; } }
 .person {
   display: block; }
   .person * {

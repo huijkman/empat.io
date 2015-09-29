@@ -885,10 +885,13 @@ a {
 .page-header {
   padding-top: 1rem;
   padding-bottom: 0.8rem; }
-  @media only screen and (max-width: 600px) {
-    .page-header .name,
-    .page-header .sub {
-      display: none; } }
+  @media only screen and (max-width: 800px) {
+    .page-header {
+      padding-top: 0.5rem;
+      padding-bottom: 0.4rem; }
+      .page-header .name,
+      .page-header .sub {
+        display: none; } }
 
 .video-container {
   height: calc(100vh - 10rem);
@@ -1011,9 +1014,7 @@ nav a:hover [class^="icon-"], nav a:hover [class*=" icon-"], nav a:focus [class^
     height: 3rem;
     width: 100vw !important;
     margin: 0 0 0 -1.5rem;
-    padding: 0 1.5rem;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white; }
+    padding: 0 1.5rem; }
     .site-header nav ul {
       height: 3rem;
       overflow: hidden;

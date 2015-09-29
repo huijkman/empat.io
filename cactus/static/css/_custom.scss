@@ -186,7 +186,9 @@ a {
 .page-header {
     padding-top: 1rem;
     padding-bottom: 0.8rem;
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 800px) {
+        padding-top: 0.5rem;
+        padding-bottom: 0.4rem;
        .name,
         .sub {
             display: none;
@@ -356,8 +358,8 @@ nav {
         width:100vw !important;
         margin: 0 0 0 -1.5rem;
         padding: 0 1.5rem;
-        background-color: rgba(0,0,0,0.8);
-        color: white;
+        // background-color: rgba(0,0,0,0.8);
+        // color: white;
         ul {
             height: 3rem;
             overflow: hidden;
