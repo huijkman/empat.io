@@ -25,13 +25,12 @@
   {% block site-header %}
 	<header class="mini-page site-header">
     <div class="cols cols-auto">
-      <div class="col">
+      <a href="/" class="col no-hover">
         <img class="site-logo" alt="Empatio" src="{% static '/images/logo-empatio.png' %}" />
-      </div>
+      </a>
 
       <nav class="col">
         <ul class="cols cols-auto">
-          <li class="col"><a href="/">Home</a></li>
           <li class="col"><a href="http://blog.empat.io">Blog</a></li>
           <li class="col"><a href="/about.html">About Empatio</a></li>
           <li class="col"><a href="/index-nl.html">Nederlands</a></li>
@@ -45,10 +44,9 @@
 		Main content
 	{% endblock content %}
 
-	<div class="mini-page">
-      <footer>
-      </footer>
-  </div>
+
+{% block footer %}
+{% endblock footer %}
 
 	{% block scripts %}
 	<script src="//code.jquery.com/jquery.min.js"></script>

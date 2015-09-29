@@ -2,13 +2,13 @@
 {% block content %}
 
 <div class="mini-page wide dark scrollable-x">
-  <ul class="cols cols-fixed">
+  <ul class="cols cols-fixed no-hover">
 			{% for post in postsEN %}
-			<li class="col text-center">
+			<li class="col text-center person">
 	      <a href="/{{ post.path }}">
 	        <img class="round" alt="" src="{{ post.thumbnail }}" />
 	        <div class="compact">
-	          <h2>{{ post.name }}</h2>
+	          <h2 class="h3">{{ post.name }}</h2>
 	          <p>{{ post.subtitle }}</p>
 	        </div>
 	      </a>
@@ -18,26 +18,22 @@
   </ul>
 </div>
 <div class="mini-page">
-  <ul class="cols cols-variable">
-    <li class="col">
+  <div class="cols">
+    <div class="col readable">
       <h2>About people</h2>
-      <p>[Text]</p>
-    </li>
-    <li class="col">
+      <p>What is Accessibility? Simply put it is Usability. It is helping people from A to B in the most efficient and friendly way. And to do so you need to know who these people are. It al starts with understanding who your users are. And all users have different needs. Here are some stories about people to get you going. <br />The videos are in dutch and have english captions</p>
+    </div>
+  </div>
+  <!--div class="cols cols-variable">
+    <div class="col">
       <h2>Share your story</h2>
       <p>We're always looking for people who can help us enrich the stories on Empat.io. Have something to share? Want to tell your story? Then contact Johan Huikman at johan@q42.nl or @huikman.</p>
-    </li>
-    <li class="col">
+    </div>
+    <div class="col">
       <h2>More Empatio</h2>
       <p>So maybe you're convinced, but what do you do about your colleagues or your organization? Is empathy the whole answer? The Empat.io blog tackles these tough questions and more.</p>
-    </li>
-  </ul>
+    </div>
+  </div-->
 </div>
-
-{% block footer %}
-	<div class="mini-page">
-		<footer>Footer</footer>
-	</div>
-{% endblock footer %}
 	
 {% endblock content %}

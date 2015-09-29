@@ -1,0 +1,21 @@
+name: Niels
+subtitle: over eenvoud
+thumbnail: /static/images/niels.jpg
+video: //www.youtube.com/embed/dDg9FUbB694?enablejsapi=1&amp;rel=0&amp;hl=nl
+
+{% extends "post.html" %}
+{% block body %}
+{% filter markdown %}
+
+{% block sub-content %}
+<div class="mini-page">
+  <div class="cols">
+    <div class="col readable">
+      <p>Er wordt hard gewerkt aan het verhaal van Niels, een ondernemer op vier wielen. Dit is slechts een voorproefje maar binnenkort verschijnt hier zijn volledige verhaal.</p>
+    </div>
+  </div>
+</div>
+{% endblock sub-content %}
+
+{% endfilter %}
+{% endblock body %}

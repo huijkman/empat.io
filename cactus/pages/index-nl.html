@@ -3,13 +3,12 @@
 {% block site-header %}
   <header class="mini-page site-header">
     <div class="cols cols-auto">
-      <div class="col">
+      <a href="/index-nl.html" class="col no-hover">
         <img class="site-logo" alt="Empatio" src="{% static '/images/logo-empatio.png' %}" />
-      </div>
+      </a>
 
       <nav class="col">
         <ul class="cols cols-auto">
-          <li class="col"><a href="/index-nl.html">Home</a></li>
           <li class="col"><a href="http://blog.empat.io">Blog</a></li>
           <li class="col"><a href="/over.html">Over Empatio</a></li>
           <li class="col"><a href="/">English</a></li>
@@ -22,9 +21,9 @@
 {% block content %}
 
 <div class="mini-page wide dark scrollable-x">
-  <ul class="cols cols-fixed">
+  <ul class="cols cols-fixed no-hover">
 			{% for post in postsNL %}
-			<li class="col text-center">
+			<li class="col text-center person">
 	      <a href="/{{ post.path }}">
 	        <img class="round" alt="" src="{{ post.thumbnail }}" />
 	        <div class="compact">
@@ -38,26 +37,22 @@
   </ul>
 </div>
 <div class="mini-page">
-  <ul class="cols cols-variable">
-    <li class="col">
-      <h2>About people</h2>
-      <p>[Text]</p>
-    </li>
-    <li class="col">
+  <div class="cols">
+    <div class="col readable">
+      <h2>Over toegankelijkheid</h2>
+      <p>Wat is toegankelijkheid? Eigenlijk is het gewoon gebruiksvriendelijkheid. Het is mensen van A naar B helpen op de meest vriendelijke en efficiente manier. Om dat te bereiken moet je weten wie jouw gebruikers zijn. Zij hebben allemaal verschillende behoeftes en voorkeuren. Hier zijn een paar verhalen om je op weg te helpen.</p>
+    </div>
+  </div>
+  <!--div class="cols cols-variable">
+    <div class="col">
       <h2>Share your story</h2>
       <p>We're always looking for people who can help us enrich the stories on Empat.io. Have something to share? Want to tell your story? Then contact Johan Huikman at johan@q42.nl or @huikman.</p>
-    </li>
-    <li class="col">
+    </div>
+    <div class="col">
       <h2>More Empatio</h2>
       <p>So maybe you're convinced, but what do you do about your colleagues or your organization? Is empathy the whole answer? The Empat.io blog tackles these tough questions and more.</p>
-    </li>
-  </ul>
+    </div>
+  </div-->
 </div>
-
-{% block footer %}
-	<div class="mini-page">
-		<footer>Footer</footer>
-	</div>
-{% endblock footer %}
 	
 {% endblock content %}
