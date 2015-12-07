@@ -842,6 +842,10 @@ a {
 .mini-page {
   margin: 0;
   padding: 1.5rem; }
+  .mini-page.illustrated {
+    padding: 0; }
+    .mini-page.illustrated img {
+      width: 100%; }
 
 @media (min-width: 1008px) {
   .mini-page {
