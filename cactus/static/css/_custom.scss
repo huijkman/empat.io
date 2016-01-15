@@ -141,6 +141,12 @@ a {
 .mini-page {
       margin: 0;
       padding: 1.5rem;
+      &.illustrated {
+        padding: 0;
+        img {
+           width: 100%;
+        }
+      }
 }
 @media (min-width: 1008px) {
     .mini-page {
