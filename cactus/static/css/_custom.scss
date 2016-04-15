@@ -122,6 +122,14 @@ a {
     color: inherit;
     text-decoration: none;
     outline: 3px solid rgba(255,255,0,0.0);
+
+    p:not(.col) & {
+        text-decoration: underline;
+        & + a {
+            margin-top: 0;
+        }
+    }
+
     &:hover,
     &:focus {
         background-color: rgba(255,255,0,0.5);
@@ -352,7 +360,7 @@ nav {
         &:hover,
         &:focus {
             [class^="icon-"], [class*=" icon-"] {
-                transform: scale(1.5);
+                transform: scale(1.5) rotate(0.1deg);
             }
         }
     }

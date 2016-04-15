@@ -31,8 +31,7 @@
 
       <nav class="col">
         <ul class="cols cols-auto">
-          <li class="col"><a href="http://blog.empat.io">Blog</a></li>
-          <li class="col"><a href="/about.html">About Empatio</a></li>
+          <li class="col"><a href="/about">About Empatio</a></li>
           <li class="col"><a href="/nl">Nederlands</a></li>
         </ul>
       </nav>
@@ -57,15 +56,66 @@
 </nav>
 </header>
 
-<div class="video-container">
-  <!--div class="content"-->
-    <iframe width="100%" height="100%" src="//www.youtube.com/embed/EM64_7LtlZo?enablejsapi=1&amp;amp;rel=0&amp;amp;hl=en&amp;amp;cc_lang_pref=en&amp;amp;cc_load_policy=1" frameborder="0" allowfullscreen></iframe>
-  <!--/div-->
-  <!--p class="text-center">Standard video controls not working for you? Open alternative controls</p-->
+<div class="mini-page">
+  <div class="video-container">
+    <!--div class="content"-->
+      <iframe width="100%" height="100%" src="//www.youtube.com/embed/EM64_7LtlZo?enablejsapi=1&amp;amp;rel=0&amp;amp;hl=en&amp;amp;cc_lang_pref=en&amp;amp;cc_load_policy=1" frameborder="0" allowfullscreen id="player"></iframe>
+    <!--/div-->
+    <!--p class="text-center">Standard video controls not working for you? Open alternative controls</p-->
+  </div>
 </div>
 
 
 
+<section class="mini-page block-guidelines">
+  <h1 class="h2">How can you help Arend?</h1>
+
+  <h2 class="section-title">For designers</h2>
+  <div class="guideline">
+    <div class="text">
+      <p>
+        <strong>Remove distraction, keep the essential.</strong>
+        People who depend on spoken texts only don't have a visual overview of a webpage or an app. By removing unnecessary information and focus on important information you can help that person accomplish their task.
+      </p>
+      <ul>
+        <li><a href="http://www.usabilityfirst.com/about-usability/accessibility/principles-of-accessible-and-universal-design/">3 steps to achieving simplicity</a></li>
+        <li><a href="http://thenextweb.com/dd/2015/03/08/how-to-reduce-friction-with-good-design">Examples about how to reduce friction in your design</a></li>
+      </ul>
+    </div>
+    <div class="image seek-video">
+      <figure>
+        <img src="/static/images/screenshots/arend-simplicity@400w.jpg"
+           srcset="/static/images/screenshots/arend-simplicity@400w.jpg 400w, /static/images/screenshots/arend-simplicity@800w.jpg"
+           alt="Video screenshot of an example of contrast" />
+        <figcaption>1:43</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <h2 class="section-title">For developers</h2>
+  <div class="guideline">
+    <div class="text">
+      <p>
+        <strong>Develop screenreader friendly.</strong> Make users with a screenreader happy by building extra assistence and shortcuts for them. Also experience the use of your website/app with a screenreader.
+      </p>
+      <ul>
+        <li>How to add extra assistence for a screenreader in your website/app (<a href="http://developer.android.com/guide/topics/ui/accessibility/index.html">Android</a> | <a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Making_Application_Accessible/Making_Application_Accessible.html">iOS</a> | <a href="http://webaim.org/techniques/css/invisiblecontent/">Web</a> | <a href="https://msdn.microsoft.com/en-us/library/windows/apps/hh700407.aspx?f=255&MSPPError=-2147217396">Windows Phone</a>)</li>
+        <li>Test with the build in screenreader of your operating system (<a href="https://support.google.com/accessibility/android/answer/6283677?hl=nl&ref_topic=3529932">Android</a> | <a href="http://webaim.org/articles/voiceover/">OS X/iOS</a> | <a href="http://windows.microsoft.com/en-us/windows/hear-text-read-aloud-narrator#1TC=windows-8">Windows</a> | <a href="http://www.windowsphone.com/en-us/how-to/wp8/settings-and-personalization/use-narrator-on-my-phone">Windows Phone</a>)</li>
+      </ul>
+    </div>
+    <div class="image seek-video">
+      <figure>
+        <img src="/static/images/screenshots/arend-screenreader@400w.jpg"
+           srcset="/static/images/screenshots/arend-screenreader@400w.jpg 400w, /static/images/screenshots/arend-screenreader@800w.jpg"
+           alt="Video screenshot of an example of clustered elements" />
+        <figcaption>0:50</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+
 
 
 
@@ -74,8 +124,35 @@
 
 
 	
-	<script src="//code.jquery.com/jquery.min.js"></script>
-	<script src="/static/js/main.js"></script>
-	
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="/static/js/main.js"></script>
+
+<script>
+
+// This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {});
+}
+
+function seekMoment(t) {
+  player.seekTo(t);
+}
+
+$('.seek-video').on('click', function(){
+  var time = $(this).find('figcaption').text();
+  time = time.split(':');
+  seconds = parseInt(time[0]*60)+parseInt(time[1]);
+  seekMoment(seconds);
+});
+
+</script>
+
 </body>
 </html>
