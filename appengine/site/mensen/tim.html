@@ -25,14 +25,13 @@
   
   <header class="mini-page site-header">
     <div class="cols cols-auto">
-      <a href="/index-nl.html" class="col no-hover">
+      <a href="/nl" class="col no-hover">
         <img class="site-logo" alt="Empatio" src="/static/images/logo-empatio.png" />
       </a>
 
       <nav class="col">
         <ul class="cols cols-auto">
-          <li class="col"><a href="http://blog.empat.io">Blog</a></li>
-          <li class="col"><a href="/over.html">Over Empatio</a></li>
+          <li class="col"><a href="/over">Over Empatio</a></li>
           <li class="col"><a href="/">English</a></li>
         </ul>
       </nav>
@@ -57,30 +56,89 @@
 </nav>
 </header>
 
-<div class="video-container">
-  <!--div class="content"-->
-    <iframe width="100%" height="100%" src="//www.youtube.com/embed/eIulUKIRco4?enablejsapi=1&amp;amp;rel=0&amp;amp;hl=nl" frameborder="0" allowfullscreen></iframe>
-  <!--/div-->
-  <!--p class="text-center">Standard video controls not working for you? Open alternative controls</p-->
+<div class="mini-page">
+  <div class="video-container">
+    <!--div class="content"-->
+      <iframe width="100%" height="100%" src="//www.youtube.com/embed/eIulUKIRco4?enablejsapi=1&amp;amp;rel=0&amp;amp;hl=nl" frameborder="0" allowfullscreen id="player"></iframe>
+    <!--/div-->
+    <!--p class="text-center">Standard video controls not working for you? Open alternative controls</p-->
+  </div>
 </div>
 
 
-<!--div class="mini-page">
-	<div class="cols cols-variable">
-	  <div class="col">
-	    <h2>Video 1</h2>
-	    <iframe width="300" height="200" src="https://www.youtube.com/embed/eIulUKIRco4" frameborder="0" allowfullscreen></iframe>
-	  </div>
-	  <div class="col">
-	    <h2>Video 2</h2>
-	    <iframe width="300" height="200" src="https://www.youtube.com/embed/eIulUKIRco4" frameborder="0" allowfullscreen></iframe>
-	  </div>
-	  <div class="col">
-	    <h2>[Title]</h2>
-	    <p>[Text]</p>
-	  </div>
+
+<section class="mini-page block-guidelines">
+	<h1 class="h2">Hoe kan jij Tim helpen?</h1>
+
+	<h2 class="section-title">Voor ontwerpers</h2>
+	<div class="guideline">
+		<div class="text">
+			<p>
+				<strong>Contrast.</strong> Als je meerdere kleuren gebruikt zorg dan dat ze onderling voldoende contrast hebben. De kleur contrast ratio is een goede indicatie om het juiste contrats te bepalen.
+			</p>
+			<ul>
+				<li><a href="http://leaverou.github.io/contrast-ratio/">Check de kleur contrast ratio tussen twee kleuren</a></li>
+				<li><a href="https://medium.com/sketch-app-sources/how-to-design-in-sketch-for-color-blind-users-2b189c0d58fe">Ontwerpen (in Sketch, Photoshop en Web) voor gebruikers die kleurenblind zijn</a></li>
+			</ul>
+		</div>
+		<div class="image seek-video">
+			<figure>
+				<img src="/static/images/screenshots/tim-contrast@400w.jpg"
+					 srcset="/static/images/screenshots/tim-contrast@400w.jpg 400w, /static/images/screenshots/tim-contrast@800w.jpg"
+					 alt="Video screenshot met een voorbeeld van contrast" />
+				<figcaption>1:14</figcaption>
+			</figure>
+		</div>
 	</div>
-</div-->
+
+	<div class="guideline">
+		<div class="text">
+			<p>
+				<strong>Maak het onderscheid tussen samengevoegde elementen niet met kleur alleen.</strong> Grafieken en foutmeldingen zijn vaak afhankelijk van kleur.
+				Zorg ervoor dat kleuren niet de enige onderscheidende factor zijn tussen verschillende soorten informatie.
+			</p>
+		</div>
+		<div class="image seek-video">
+			<figure>
+				<img src="/static/images/screenshots/tim-clutter@400w.jpg"
+					 srcset="/static/images/screenshots/tim-clutter@400w.jpg 400w, /static/images/screenshots/tim-clutter@800w.jpg"
+					 alt="Video screenshot met een voorbeeld van samengevoegde elementen" />
+				<figcaption>1:30</figcaption>
+			</figure>
+		</div>
+	</div>
+
+	<h2 class="section-title">Voor ontwikkelaars</h2>
+	<div class="guideline">
+		<div class="text">
+			<p>
+				<strong>Test het kleurencontrast.</strong> Zorg ervoor dat jouw websites/apps een goed contrast behouden.
+			</p>
+			<ul>
+				<li>Android: <a href="http://www.tomsguide.com/us/color-blind-mode-android-5.0,news-20475.html">Test jouw app door de ogen van iemand die kleurenblind is</a></li>
+				<li>iOS: Test op jouw iPhone/iPad met de accessibility features <a href="http://www.imore.com/how-enable-grayscale-visual-accessibility-your-iphone-or-ipad">Grijstinten</a> en <a href="http://www.imore.com/how-invert-screen-colors-iphone-and-ipad">Inverteer kleuren</a> of gebruik <a href="http://colororacle.org/">Color Oracle</a> samen met de emulator</li>
+				<li>Web: Test het kleurencontrast met <a href="http://khan.github.io/tota11y/">Tota11ly</a></li>
+			</ul>
+		</div>
+		<div class="image seek-video">
+			<figure>
+				<img src="/static/images/screenshots/tim-contrast2@400w.jpg"
+					 srcset="/static/images/screenshots/tim-contrast2@400w.jpg 400w, /static/images/screenshots/tim-contrast2@800w.jpg"
+					 alt="Video screenshot met een voorbeeld van samengevoegde elementen" />
+				<figcaption>2:13</figcaption>
+			</figure>
+		</div>
+	</div>
+</section>
+
+<section class="mini-page block-guidelines">
+	<h1 class="h2">Meer weten over kleurenblindheid?</h1>
+	<ul>
+		<li><a href="http://wearecolorblind.com/article/a-quick-introduction-to-color-blindness/">A quick introduction about color blindness</a></li>
+		<li><a href="http://wearecolorblind.com/examples">10 good and bad examples of color-usage on websites</a></li>
+	</ul>
+</section>
+
 
 
 
@@ -90,8 +148,35 @@
 
 
 	
-	<script src="//code.jquery.com/jquery.min.js"></script>
-	<script src="/static/js/main.js"></script>
-	
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="/static/js/main.js"></script>
+
+<script>
+
+// This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {});
+}
+
+function seekMoment(t) {
+  player.seekTo(t);
+}
+
+$('.seek-video').on('click', function(){
+  var time = $(this).find('figcaption').text();
+  time = time.split(':');
+  seconds = parseInt(time[0]*60)+parseInt(time[1]);
+  seekMoment(seconds);
+});
+
+</script>
+
 </body>
 </html>

@@ -32,7 +32,23 @@ class MainNLHandler(webapp2.RequestHandler):
         }
         self.response.out.write(template.render(path, template_values))
 
+class AboutHandler(webapp2.RequestHandler):
+    def get(self):
+        path = os.path.join(os.path.dirname(__file__), 'site/about.html')
+        template_values = {
+        }
+        self.response.out.write(template.render(path, template_values))
+
+class AboutNLHandler(webapp2.RequestHandler):
+    def get(self):
+        path = os.path.join(os.path.dirname(__file__), 'site/over.html')
+        template_values = {
+        }
+        self.response.out.write(template.render(path, template_values))
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/nl', MainNLHandler)
+    ('/nl', MainNLHandler),
+    ('/about', AboutHandler),
+    ('/over', AboutNLHandler)
 ], debug=True)

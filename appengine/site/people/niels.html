@@ -31,8 +31,7 @@
 
       <nav class="col">
         <ul class="cols cols-auto">
-          <li class="col"><a href="http://blog.empat.io">Blog</a></li>
-          <li class="col"><a href="/about.html">About Empatio</a></li>
+          <li class="col"><a href="/about">About Empatio</a></li>
           <li class="col"><a href="/nl">Nederlands</a></li>
         </ul>
       </nav>
@@ -57,18 +56,20 @@
 </nav>
 </header>
 
-<div class="video-container">
-  <!--div class="content"-->
-    <iframe width="100%" height="100%" src="//www.youtube.com/embed/dDg9FUbB694?enablejsapi=1&amp;amp;rel=0&amp;amp;hl=en&amp;amp;cc_lang_pref=en&amp;amp;cc_load_policy=1" frameborder="0" allowfullscreen></iframe>
-  <!--/div-->
-  <!--p class="text-center">Standard video controls not working for you? Open alternative controls</p-->
+<div class="mini-page">
+  <div class="video-container">
+    <!--div class="content"-->
+      <iframe width="100%" height="100%" src="//www.youtube.com/embed/dDg9FUbB694?enablejsapi=1&amp;amp;rel=0&amp;amp;hl=en&amp;amp;cc_lang_pref=en&amp;amp;cc_load_policy=1" frameborder="0" allowfullscreen id="player"></iframe>
+    <!--/div-->
+    <!--p class="text-center">Standard video controls not working for you? Open alternative controls</p-->
+  </div>
 </div>
 
 
 <div class="mini-page">
   <div class="cols">
     <div class="col readable">
-      <p>Currently I'm working on the story of Niels, a four wheel driven entrepeneur. This is just a preview but stay tuned for his full story.</p>
+      <p>Niels is a four wheel driven entrepeneur. This video is just part of his story where he explains why it is important to remove anything from your designs that has nothing to do with the task at hand.</p>
     </div>
   </div>
 </div>
@@ -81,8 +82,35 @@
 
 
 	
-	<script src="//code.jquery.com/jquery.min.js"></script>
-	<script src="/static/js/main.js"></script>
-	
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="/static/js/main.js"></script>
+
+<script>
+
+// This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {});
+}
+
+function seekMoment(t) {
+  player.seekTo(t);
+}
+
+$('.seek-video').on('click', function(){
+  var time = $(this).find('figcaption').text();
+  time = time.split(':');
+  seconds = parseInt(time[0]*60)+parseInt(time[1]);
+  seekMoment(seconds);
+});
+
+</script>
+
 </body>
 </html>

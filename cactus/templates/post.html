@@ -19,14 +19,48 @@
 </nav>
 </header>
 
-<div class="video-container">
-  <!--div class="content"-->
-    <iframe width="100%" height="100%" src="{{ video }}" frameborder="0" allowfullscreen></iframe>
-  <!--/div-->
-  <!--p class="text-center">Standard video controls not working for you? Open alternative controls</p-->
+<div class="mini-page">
+  <div class="video-container">
+    <!--div class="content"-->
+      <iframe width="100%" height="100%" src="{{ video }}" frameborder="0" allowfullscreen id="player"></iframe>
+    <!--/div-->
+    <!--p class="text-center">Standard video controls not working for you? Open alternative controls</p-->
+  </div>
 </div>
 
 {% block sub-content %}
 {% endblock sub-content %}
 
 {% endblock content %}
+
+{% block scripts %}
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="{% static '/js/main.js' %}"></script>
+
+<script>
+
+// This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {});
+}
+
+function seekMoment(t) {
+  player.seekTo(t);
+}
+
+$('.seek-video').on('click', function(){
+  var time = $(this).find('figcaption').text();
+  time = time.split(':');
+  seconds = parseInt(time[0]*60)+parseInt(time[1]);
+  seekMoment(seconds);
+});
+
+</script>
+{% endblock scripts %}
