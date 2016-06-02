@@ -850,6 +850,11 @@ a {
     padding: 0; }
     .mini-page.illustrated img {
       width: 100%; }
+  .mini-page.double-white-space {
+    padding-top: 3rem;
+    padding-bottom: 3rem; }
+  .mini-page.double-white-space-bottom {
+    padding-bottom: 3rem; }
 
 @media (min-width: 1008px) {
   .mini-page {

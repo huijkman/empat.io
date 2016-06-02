@@ -60,6 +60,7 @@ $('.seek-video').on('click', function(){
   time = time.split(':');
   seconds = parseInt(time[0]*60)+parseInt(time[1]);
   seekMoment(seconds);
+  $(window).scrollTop(0);
 });
 
 </script>

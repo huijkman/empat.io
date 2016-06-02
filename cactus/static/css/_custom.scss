@@ -155,6 +155,13 @@ a {
            width: 100%;
         }
       }
+      &.double-white-space{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    &.double-white-space-bottom{
+        padding-bottom: 3rem;
+    }
 }
 @media (min-width: 1008px) {
     .mini-page {
