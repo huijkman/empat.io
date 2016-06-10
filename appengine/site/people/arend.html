@@ -16,8 +16,14 @@
     <link rel="shortcut icon" href="/static/images/favicon.ico">
 
 		<link rel="stylesheet" href="/static/css/style.css">
-
-    <script src="/static/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-60715419-1', 'auto');
+      ga('send', 'pageview');
+    </script>
   </head>
 
 <body>
@@ -82,7 +88,7 @@
         <li><a href="http://thenextweb.com/dd/2015/03/08/how-to-reduce-friction-with-good-design">Examples about how to reduce friction in your design</a></li>
       </ul>
     </div>
-    <div class="image seek-video">
+    <div class="image seek-video" data-seconds="103">
       <figure>
         <img src="/static/images/screenshots/arend-simplicity@400w.jpg"
            srcset="/static/images/screenshots/arend-simplicity@400w.jpg 400w, /static/images/screenshots/arend-simplicity@800w.jpg"
@@ -103,7 +109,7 @@
         <li>Test with the build in screenreader of your operating system (<a href="https://support.google.com/accessibility/android/answer/6283677?hl=nl&ref_topic=3529932">Android</a> | <a href="http://webaim.org/articles/voiceover/">OS X/iOS</a> | <a href="http://windows.microsoft.com/en-us/windows/hear-text-read-aloud-narrator#1TC=windows-8">Windows</a> | <a href="http://www.windowsphone.com/en-us/how-to/wp8/settings-and-personalization/use-narrator-on-my-phone">Windows Phone</a>)</li>
       </ul>
     </div>
-    <div class="image seek-video">
+    <div class="image seek-video" data-seconds="50">
       <figure>
         <img src="/static/images/screenshots/arend-screenreader@400w.jpg"
            srcset="/static/images/screenshots/arend-screenreader@400w.jpg 400w, /static/images/screenshots/arend-screenreader@800w.jpg"
@@ -124,9 +130,6 @@
 
 
 	
-<script src="//code.jquery.com/jquery.min.js"></script>
-<script src="/static/js/main.js"></script>
-
 <script>
 
 // This code loads the IFrame Player API code asynchronously.
@@ -145,12 +148,14 @@ function seekMoment(t) {
   player.seekTo(t);
 }
 
-$('.seek-video').on('click', function(){
-  var time = $(this).find('figcaption').text();
-  time = time.split(':');
-  seconds = parseInt(time[0]*60)+parseInt(time[1]);
-  seekMoment(seconds);
-});
+var els = document.querySelectorAll('.seek-video');
+for (var i = 0; i < els.length; i++) {
+  els[i].addEventListener('click', function(el) {
+    var seconds = parseInt(el.currentTarget.dataset.seconds);
+    seekMoment(seconds);
+    window.scrollTo(0,0);
+  });
+}
 
 </script>
 
