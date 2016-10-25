@@ -55,7 +55,12 @@ function seekMoment(t) {
 var els = document.querySelectorAll('.seek-video');
 for (var i = 0; i < els.length; i++) {
   els[i].addEventListener('click', function(el) {
-    var seconds = parseInt(el.currentTarget.dataset.seconds);
+    var ms = this.querySelector('figcaption').innerHTML;
+    var a = ms.split(':'); // split it at the colons
+
+    // minutes are worth 60 seconds. Hours are worth 60 minutes.
+    var seconds = (+a[0]) * 60 + (+a[1]);
+
     seekMoment(seconds);
     window.scrollTo(0,0);
   });

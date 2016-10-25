@@ -80,6 +80,32 @@
   </div>
 </div>
 
+<section class="mini-page block-guidelines">
+  <h1 class="h2">Hoe kan jij Niels helpen?</h1>
+
+  <h2 class="section-title">Voor ontwerpers &amp; ontwikkelaars</h2>
+  <div class="guideline">
+    <div class="text">
+      <p>
+        <strong>Verwijder afleiding, behoudt alleen wat er écht nodig is.</strong>
+        Mensen zoals Niels zijn erg snel afgeleid door visuele afleiding op een website of in een app. Je kunt die persoon helpen om gefocused te blijven op het doel door afleiding te verwijderen uit je ontwerp. Afleiding kan teveel geclusterde informatie, teveel keuzes in informatie of flitsende/plotseling verschijnende content die je aandacht wil.
+      </p>
+      <ul>
+        <li><a href="http://thenextweb.com/dd/2015/03/08/how-to-reduce-friction-with-good-design">Verwijder afleiding in je ontwerp met deze stappen</a></li>
+      </ul>
+    </div>
+    <div class="image seek-video">
+      <figure>
+        <img src="/static/images/screenshots/niels-simplicity@400w.jpg"
+           srcset="/static/images/screenshots/niels-simplicity@400w.jpg 400w, /static/images/screenshots/niels-simplicity@800w.jpg"
+           alt="Video screenshot van Niels" />
+        <figcaption>1:23</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
 
 
 
@@ -109,7 +135,12 @@ function seekMoment(t) {
 var els = document.querySelectorAll('.seek-video');
 for (var i = 0; i < els.length; i++) {
   els[i].addEventListener('click', function(el) {
-    var seconds = parseInt(el.currentTarget.dataset.seconds);
+    var ms = this.querySelector('figcaption').innerHTML;
+    var a = ms.split(':'); // split it at the colons
+
+    // minutes are worth 60 seconds. Hours are worth 60 minutes.
+    var seconds = (+a[0]) * 60 + (+a[1]);
+
     seekMoment(seconds);
     window.scrollTo(0,0);
   });
