@@ -34,9 +34,6 @@
 {% endblock content %}
 
 {% block scripts %}
-<script src="//code.jquery.com/jquery.min.js"></script>
-<script src="{% static '/js/main.js' %}"></script>
-
 <script>
 
 // This code loads the IFrame Player API code asynchronously.
@@ -55,12 +52,19 @@ function seekMoment(t) {
   player.seekTo(t);
 }
 
-$('.seek-video').on('click', function(){
-  var time = $(this).find('figcaption').text();
-  time = time.split(':');
-  seconds = parseInt(time[0]*60)+parseInt(time[1]);
-  seekMoment(seconds);
-});
+var els = document.querySelectorAll('.seek-video');
+for (var i = 0; i < els.length; i++) {
+  els[i].addEventListener('click', function(el) {
+    var ms = this.querySelector('figcaption').innerHTML;
+    var a = ms.split(':'); // split it at the colons
+
+    // minutes are worth 60 seconds. Hours are worth 60 minutes.
+    var seconds = (+a[0]) * 60 + (+a[1]);
+
+    seekMoment(seconds);
+    window.scrollTo(0,0);
+  });
+}
 
 </script>
 {% endblock scripts %}
