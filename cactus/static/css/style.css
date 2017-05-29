@@ -979,7 +979,7 @@ footer {
 .cols-fixed {
   flex-wrap: nowrap; }
   .cols-fixed > .col {
-    flex: 1 0 33.33333%;
+    flex: 1 0 28.5%;
     min-width: 300px;
     max-width: 100%; }
 

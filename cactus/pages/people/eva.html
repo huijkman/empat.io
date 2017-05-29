@@ -1,0 +1,25 @@
+name: Eva
+subtitle: on captions
+thumbnail: /static/images/eva.png
+video: //www.youtube.com/embed/BDVxojOdrGI?enablejsapi=1&amp;rel=0&amp;hl=en&amp;
+
+{% extends "post.html" %}
+{% block body %}
+{% filter markdown %}
+
+{% block sub-content %}
+
+<section class="mini-page block-guidelines">
+	<h1 class="h2">The importance of captions</h1>
+	<div>
+		<p>
+			Eva is a communication adviser. So she knows a thing or two about getting the message across. And she has some advise on making videos.
+		</p>
+	</div>
+
+</section>
+
+{% endblock sub-content %}
+
+{% endfilter %}
+{% endblock body %}
